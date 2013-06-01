@@ -4,55 +4,31 @@
         "applicant": {
             "name": null,
             "address": {
-                "streetNumber": null,
                 "street": null,
-                "suite": null,
                 "state": null,
                 "zip": null
             },
-            "phone": {
-                "areaCode": null,
-                "number": null
-            },
-            "fax": {
-                "areaCode": null,
-                "number": null
-            },
+            "phone": null,
+            "fax": null,
             "email": null
         },
         "organization": {
             "name": null,
-            "type": {
-                "profit": false,
-                "non-profit": false,
-                "other": null
-            },
+            "types": ["profit", "non-profit"],
+            "type": null,
             "address": {
-                "streetNumber": null,
                 "street": null,
-                "suite": null,
                 "state": null,
                 "zip": null
             },
-            "phone": {
-                "areaCode": null,
-                "number": null
-            },
-            "fax": {
-                "areaCode": null,
-                "number": null
-            },
+            "phone": null,
+            "fax": null,
             "email": null
         },
         "event": {
             "purpose": null,
-            "type": {
-                "blockParty": false,
-                "parade": false,
-                "festival": false,
-                "walk": false,
-                "other": null
-            },
+            "types": ["block", "parade", "festival", "walk"],
+            "type": null,
             "eventDate": {
                 "date": null,
                 "rain": null
@@ -64,15 +40,10 @@
             },
             "contactPerson": {
                 "name": null,
-                "phone": {
-                    "areaCode": null,
-                    "number": null
-                }
+                "phone": null
             },
             "location": {
-                "streetNumber": null,
                 "street": null,
-                "suite": null,
                 "state": null,
                 "zip": null,
                 "type": {
@@ -82,27 +53,15 @@
                 }
             },
             "setUp": {
-                "tents": {
-                    "ifTents": false,
-                    "size": null
-                },
+                "tents": false,
                 "openBurn": false,
                 "fireworks": false
             },
             "participants": null,
-            "roadEnclosure": {
-                "required": false,
-                "streets": null
-            }
+            "roadEnclosure": false
         },
-        "itemsForSale": {
-            "required": false,
-            "description": null
-        },
-        "food": {
-            "required": false,
-            "description": null
-        },
+        "itemsForSale": false,
+        "food": false,
         "alcohol": false,
         "otherServices": {
             "tempStructure": false,
@@ -113,14 +72,9 @@
         "insurance": {
             "carrierName": null,
             "agentName": null,
-            "phone": {
-                "areaCode": null,
-                "number": null
-            },
+            "phone": null,
             "address": {
-                "streetNumber": null,
                 "street": null,
-                "suite": null,
                 "state": null,
                 "zip": null
             }
