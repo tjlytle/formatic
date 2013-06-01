@@ -1,0 +1,15 @@
+{
+	"ID": null,
+	"electricalApplication": {
+
+		"booth": null,
+		"equipment": {
+			"number": null,
+			"description": null,
+			"wattage": null,
+			"voltage": null
+		},
+		"boothSize": null,
+		"boothName": null,
+		"schematic": null
+}
