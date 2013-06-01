@@ -1,0 +1,60 @@
+{
+	"ID": null,
+	"recyclingApplication": {
+
+		"eventName": null,
+		"eventType": {
+			"fair": false,
+			"picnic": false,
+			"festival": false,
+			"sporting": false,
+			"other": null
+		},
+
+		"startDate": {
+			"date": null,
+			"time": null
+		},
+
+		"completionDate": {
+			"date": null,
+			"time": null
+		},
+
+		"location": {
+			"street": null,
+			"neighborhood": null
+		},
+
+		"attendance": null,
+
+		"organization": {
+			"name": null,
+			"contact": null,
+			"address": {
+				"street": null,
+				"state": null,
+				"zip": null
+			},
+
+			"phone": null,
+			"alternatePhone": null,
+			"email": null,
+			"fax": null,
+
+			"services": {
+				"privateHauler": false,
+				"ownedContainers": false,
+				"cityContainers": false
+			}
+		},
+
+		"managerName": null,
+		"date": null,
+
+		"cityEquipment": {
+			"recyclingBins": false,
+			"binNumber": null
+		}
+	}
+}
