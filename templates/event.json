@@ -1,160 +1,132 @@
 {
-	"ID": null 
-	"specialEventApplication" {
-
-		"applicant": {
-			"name": null,
-			"address": {
-				"streetNumber": null,
-				"street": null,
-				"suite": null,
-				"state": null,
-				"zip": null
-			},
-
-			"phone": {
-				"areaCode": null,
-				"number": null
-			},
-
-			"fax": {
-				"areaCode": null,
-				"number": null
-			},
-
-			"email": null
-		},
-
-		"organization": {
-			"name": null,
-			"type": {
-				"profit": false,
-				"non-profit": false,
-				"other": null
-			},
-
-			"address": {
-				"streetNumber": null,
-				"street": null,
-				"suite": null,
-				"state": null,
-				"zip": null
-			},
-
-			"phone": {
-				"areaCode": null,
-				"number": null
-			},
-
-			"fax": {
-				"areaCode": null,
-				"number": null
-			},
-
-			"email": null
-		},
-
-		"event": {
-			"purpose": null,
-			"type": {
-				"blockParty": false,
-				"parade": false,
-				"festival": false,
-				"walk": false,
-				"other": null
-			},
-
-			"eventDate": {
-				"date": null,
-				"rain": null
-			},
-
-			"hours": {
-				"duringEvent": null,
-				"setUp": null,
-				"takeDown": null
-			},
-
-			"contactPerson": {
-				"name": null,
-				"phone": {
-					"areaCode": null,
-					"number": null
-				}
-			},
-
-			"location": {
-				"streetNumber": null,
-				"street": null,
-				"suite": null,
-				"state": null,
-				"zip": null,
-				"type": {
-					"publicRightOfWay": false,
-					"publicProp": false,
-					"privateProp": false
-				}
-			},
-
-			"setUp": {
-				"tents": {
-					"ifTents": false,
-					"size": null
-				},
-				"openBurn": false,
-				"fireworks": false
-			},
-
-			"participants": null,
-
-			"roadEnclosure": {
-				"required": false,
-				"streets": null
-				}
-
-			},
-
-			"itemsForSale": {
-				"required": false,
-				"description": null
-			},
-
-			"food": {
-				"required": false,
-				"description": null
-			},
-
-			"alcohol": false,
-
-			"otherServices": {
-				"tempStructure": false,
-				"cleanUp": false,
-				"hydrant": false,
-				"electricity": false
-			},
-
-			"insurance": {
-				"carrierName": null,
-				"agentName": null,
-				"phone": {
-					"areaCode": null,
-					"number": null
-				},
-				"address": {
-					"streetNumber": null,
-					"street": null,
-					"suite": null,
-					"state": null,
-					"zip": null
-				}
-
-			},
-
-			"applcantName": null,
-			"date": null,
-			"comments": null
-
-		}
-
-	}
+    "id": null,
+    "specialEventApplication": {
+        "applicant": {
+            "name": null,
+            "address": {
+                "streetNumber": null,
+                "street": null,
+                "suite": null,
+                "state": null,
+                "zip": null
+            },
+            "phone": {
+                "areaCode": null,
+                "number": null
+            },
+            "fax": {
+                "areaCode": null,
+                "number": null
+            },
+            "email": null
+        },
+        "organization": {
+            "name": null,
+            "type": {
+                "profit": false,
+                "non-profit": false,
+                "other": null
+            },
+            "address": {
+                "streetNumber": null,
+                "street": null,
+                "suite": null,
+                "state": null,
+                "zip": null
+            },
+            "phone": {
+                "areaCode": null,
+                "number": null
+            },
+            "fax": {
+                "areaCode": null,
+                "number": null
+            },
+            "email": null
+        },
+        "event": {
+            "purpose": null,
+            "type": {
+                "blockParty": false,
+                "parade": false,
+                "festival": false,
+                "walk": false,
+                "other": null
+            },
+            "eventDate": {
+                "date": null,
+                "rain": null
+            },
+            "hours": {
+                "duringEvent": null,
+                "setUp": null,
+                "takeDown": null
+            },
+            "contactPerson": {
+                "name": null,
+                "phone": {
+                    "areaCode": null,
+                    "number": null
+                }
+            },
+            "location": {
+                "streetNumber": null,
+                "street": null,
+                "suite": null,
+                "state": null,
+                "zip": null,
+                "type": {
+                    "publicRightOfWay": false,
+                    "publicProp": false,
+                    "privateProp": false
+                }
+            },
+            "setUp": {
+                "tents": {
+                    "ifTents": false,
+                    "size": null
+                },
+                "openBurn": false,
+                "fireworks": false
+            },
+            "participants": null,
+            "roadEnclosure": {
+                "required": false,
+                "streets": null
+            }
+        },
+        "itemsForSale": {
+            "required": false,
+            "description": null
+        },
+        "food": {
+            "required": false,
+            "description": null
+        },
+        "alcohol": false,
+        "otherServices": {
+            "tempStructure": false,
+            "cleanUp": false,
+            "hydrant": false,
+            "electricity": false
+        },
+        "insurance": {
+            "carrierName": null,
+            "agentName": null,
+            "phone": {
+                "areaCode": null,
+                "number": null
+            },
+            "address": {
+                "streetNumber": null,
+                "street": null,
+                "suite": null,
+                "state": null,
+                "zip": null
+            }
+        },
+        "applcantName": null,
+        "date": null,
+        "comments": null
+    }
 }
