@@ -26,8 +26,13 @@ $app->get('/form/event/:id', function ($id = null) use ($app) {
     
     $event = json_decode(file_get_contents('/tmp/'.$id), true);
 
-    switch($app->request()->headers('Accept')){
-        case 'application/pdf':
+    $format = $app->request()->get('format');
+    if('application/pdf' == $app->request()->headers('Accept')){
+        $format = 'pdf';        
+    }
+    
+    switch($format){
+        case 'pdf':
             $model = new \OpenForm\Model\Event($event);
             file_put_contents('/tmp/'.$id.'.fdf', $model->genFDF());
             
