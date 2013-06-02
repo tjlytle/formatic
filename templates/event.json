@@ -14,7 +14,10 @@
         },
         "organization": {
             "name": null,
-            "types": ["profit", "non-profit"],
+            "types": [
+                "profit",
+                "non-profit"
+            ],
             "type": null,
             "address": {
                 "street": null,
@@ -27,7 +30,12 @@
         },
         "event": {
             "purpose": null,
-            "types": ["block", "parade", "festival", "walk"],
+            "types": [
+                "block",
+                "parade",
+                "festival",
+                "walk"
+            ],
             "type": null,
             "eventDate": {
                 "date": null,
@@ -43,9 +51,11 @@
                 "phone": null
             },
             "location": {
-                "street": null,
-                "state": null,
-                "zip": null,
+                "address": {
+                    "street": null,
+                    "state": null,
+                    "zip": null
+                },
                 "type": {
                     "publicRightOfWay": false,
                     "publicProp": false,

@@ -1,4 +1,13 @@
 <?php
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Headers: X-Requested-With, Content-Type');
+
+// respond to preflights
+if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+    //header('Access-Control-Allow-Headers: X-Requested-With');
+    exit;
+}
+
 //some path stuff
 $templates = realpath(__DIR__ . '/../templates');
 $event = json_decode(file_get_contents($templates . '/event.json'), true);
@@ -15,10 +24,21 @@ $app->get('/form/event/:id', function ($id = null) use ($app) {
         return;
     }
     
-    $event = json_decode(file_get_contents('/tmp/'.$id));
-    
-    //spit out data
-    $app->response()->body(json_encode($event));
+    $event = json_decode(file_get_contents('/tmp/'.$id), true);
+
+    switch($app->request()->headers('Accept')){
+        case 'application/pdf':
+            $model = new \OpenForm\Model\Event($event);
+            file_put_contents('/tmp/'.$id.'.fdf', $model->genFDF());
+            
+            exec('pdftk ./../test.pdf fill_form /tmp/'.$id.'.fdf output /tmp/'.$id.'.pdf');
+            $app->response()->header('Content-Type', 'application/pdf');
+            $app->response()->body(file_get_contents('/tmp/'.$id.'.pdf'));
+            return;
+        default:
+            //spit out data
+            $app->response()->body(json_encode($event));
+    }
 });
 
 $app->post('/form/event/', function () use ($app, $event) {
