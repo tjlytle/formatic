@@ -50,7 +50,7 @@ $app->post('/form/event/', function () use ($app, $event) {
     //merge data
     $post = $app->request()->post('specialEventApplication');
     if($post AND is_array($post)){
-        $event['specialEventApplication'] = array_merge($event['specialEventApplication'], $post);
+        $event['specialEventApplication'] = array_merge_recursive_distinct($event['specialEventApplication'], $post);
     }
 
     //save data (what?)
@@ -74,7 +74,7 @@ $app->put('/form/event/:id', function ($id) use ($app, $name, $event) {
     //merge data
     $post = $app->request()->post('specialEventApplication');
     if($post AND is_array($post)){
-        $event['specialEventApplication'] = array_merge($event['specialEventApplication'], $post);
+        $event['specialEventApplication'] = array_merge_recursive_distinct($event['specialEventApplication'], $post);
     }
     
     file_put_contents('/tmp/'.$id, json_encode($event));
@@ -83,5 +83,22 @@ $app->put('/form/event/:id', function ($id) use ($app, $name, $event) {
     $app->response()->body(json_encode($event));
 });
 
+function array_merge_recursive_distinct ( array &$array1, array &$array2 )
+{
+  $merged = $array1;
 
+  foreach ( $array2 as $key => &$value )
+  {
+    if ( is_array ( $value ) && isset ( $merged [$key] ) && is_array ( $merged [$key] ) )
+    {
+      $merged [$key] = array_merge_recursive_distinct ( $merged [$key], $value );
+    }
+    else
+    {
+      $merged [$key] = $value;
+    }
+  }
+
+  return $merged;
+}
 $app->run();
